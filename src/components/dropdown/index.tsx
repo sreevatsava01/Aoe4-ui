@@ -4,7 +4,11 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import { civilisation } from "../../constants/civilisation";
+import Avatar from "@mui/material/Avatar";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import { useEffect } from "react";
+import AbbasidImage from "./Abbasid.jpg";
 
 export default function BasicSelect(props) {
   const [selectedValue, setSelectedValue] = React.useState("");
@@ -13,7 +17,9 @@ export default function BasicSelect(props) {
     setSelectedValue(event.target.value as string);
   };
 
-  console.log({ props });
+  useEffect(() => {
+    console.log("civs prop:", props.civs);
+  }, [props.civs]);
 
   return (
     <Box sx={{ minWidth: 120 }}>
@@ -29,7 +35,10 @@ export default function BasicSelect(props) {
           {props.civs && props.civs.length > 0 ? (
             props.civs.map((civ, index) => (
               <MenuItem key={index} value={civ}>
-                {civ}
+                <ListItemAvatar>
+                  <Avatar alt={civ} src={AbbasidImage} />
+                </ListItemAvatar>
+                <ListItemText primary={civ} />
               </MenuItem>
             ))
           ) : (

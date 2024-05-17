@@ -1,1 +1,18 @@
-export const civilisation = ['french','malians','jean d\'arc']
+export const civilisation = [
+  "Abbasid",
+  "Ayyubids",
+  "Byzantines",
+  "Chinese",
+  "Delhi",
+  "English",
+  "French",
+  "HRE",
+  "Japanese",
+  "Jean d'arc",
+  "Malians",
+  "Mongols",
+  "OrderoftheDragon",
+  "Ottomans",
+  "Rus",
+  "ZhuXiLegacy",
+]
