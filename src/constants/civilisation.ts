@@ -1,0 +1,1 @@
+export const civilisation = ['french','malians','jean d\'arc']
