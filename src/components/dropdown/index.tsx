@@ -8,7 +8,7 @@ import Avatar from "@mui/material/Avatar";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import { useEffect } from "react";
-import AbbasidImage from "./Abbasid.jpg";
+// import AbbasidImage from "./Abbasid.jpg";
 
 export default function BasicSelect(props) {
   const [selectedValue, setSelectedValue] = React.useState("");
@@ -35,10 +35,10 @@ export default function BasicSelect(props) {
           {props.civs && props.civs.length > 0 ? (
             props.civs.map((civ, index) => (
               <MenuItem key={index} value={civ}>
-                <ListItemAvatar>
-                  <Avatar alt={civ} src={AbbasidImage} />
-                </ListItemAvatar>
-                <ListItemText primary={civ} />
+                <div className="flex gap-2 items-center">
+                  <img alt={civ} src={civ + ".webp"} className="w-14"></img>
+                  <ListItemText primary={civ} />
+                </div>
               </MenuItem>
             ))
           ) : (

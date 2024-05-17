@@ -4,6 +4,8 @@ import { Box, TextField } from "@mui/material";
 import { civilisation } from "../../constants/civilisation";
 import ResultBox from "../resultbox";
 
+const civss = ["Abbasid", "Ayyubids", "Byzantines"];
+
 export default function TabContent() {
   return (
     <Box className="grid-cols-10 grid gap-4">
@@ -15,7 +17,7 @@ export default function TabContent() {
         <Dropdown label="civ4" civs={civilisation} />
       </Box>
       <Box className="col-span-8">
-        <ResultBox></ResultBox>
+        <ResultBox civ={civss}></ResultBox>
       </Box>
     </Box>
   );
